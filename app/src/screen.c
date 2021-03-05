@@ -270,7 +270,7 @@ screen_init_rendering(struct screen *screen, const char *window_title,
         return false;
     }
 
-    screen->renderer = SDL_CreateRenderer(screen->window, -1,
+    screen->renderer = SDL_CreateRenderer(screen->window, 2,
                                           SDL_RENDERER_ACCELERATED);
     if (!screen->renderer) {
         LOGC("Could not create renderer: %s", SDL_GetError());
